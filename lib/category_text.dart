@@ -17,7 +17,7 @@ class ButtonText extends StatelessWidget{
               borderRadius: new BorderRadius.circular(12),
             ),
           ),
-          onPressed:null ,
+          onPressed:null,
           child:  Text(buttonText,textAlign:TextAlign.center,
           style:TextStyle(
             fontSize:16,

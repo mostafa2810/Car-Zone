@@ -33,10 +33,12 @@ var formkey=GlobalKey<FormState>();
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 22),
+                  padding: const EdgeInsets.symmetric(vertical: 22,horizontal: 8),
                   child: TextButton(onPressed: (){
                     Navigator.pushNamed(context, homepage.routeName);
-                  }, child: Text('SKIP',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
+                  }, child: Container(
+                    alignment: Alignment.topRight,
+                      child: Text('SKIP', style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),))),
                 ),
 
                 Padding(
@@ -190,10 +192,13 @@ var formkey=GlobalKey<FormState>();
                         EdgeInsets.symmetric(horizontal: 34, vertical: 1),
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, homepage.routeName) ;
+
                             if (formkey.currentState?.validate() == true) {
                               loginaccountwithfirebaseauth();
+                              // Navigator.pushNamed(context, homepage.routeName) ;
                             }
+
+
                           },
                           child: Text('LOG IN',
                               style: TextStyle(color: Colors.white)),

@@ -43,11 +43,11 @@ class _homepageState extends State<homepage> {
               BottomNavigationBarItem(icon: Image.asset('assets/images/categoryicon.png'),
                   label: 'category'),
               BottomNavigationBarItem(icon: Image.asset('assets/images/compar.png'),
-                  label: 'compar'),
+                  label: 'compare'),
               BottomNavigationBarItem(icon: Image.asset('assets/images/fav.png'),
                   label: 'fav'),
               BottomNavigationBarItem(icon: Image.asset('assets/images/profil.png'),
-                  label: 'profil'),
+                  label: 'profile'),
 
 
             ],

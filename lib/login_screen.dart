@@ -32,10 +32,11 @@ class _logincreenState extends State<logincreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 22),
+                  padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 8),
                   child: TextButton(onPressed: (){
                     Navigator.pushNamed(context, sginin.routeName);
-                  }, child: Text('SKIP',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
+                  }, child: Container(alignment: Alignment.topRight,
+                      child: Text('SKIP',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),))),
                 ),
                 Padding(
                   padding:
@@ -274,10 +275,12 @@ class _logincreenState extends State<logincreen> {
                             EdgeInsets.symmetric(horizontal: 34, vertical: 1),
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, homepage.routeName) ;
+
                             if (formkey.currentState?.validate() == true) {
                               creataccountwithfirebaseauth();
+
                             }
+                            // Navigator.pushNamed(context, homepage.routeName) ;
                           },
                           child: Text('LOG IN',
                               style: TextStyle(color: Colors.white)),

@@ -1,5 +1,7 @@
 import 'package:car_zone/car_agencies.dart';
 import 'package:car_zone/car_service.dart';
+import 'package:car_zone/category.dart';
+import 'package:car_zone/service.dart';
 import 'package:car_zone/new_car.dart';
 import 'package:car_zone/old_car.dart';
 import 'package:car_zone/rescue_winch.dart';
@@ -73,7 +75,7 @@ class homepagewidget extends StatelessWidget{
                       TextButton(
 
                         onPressed: (){
-                          Navigator.pushNamed(context, carservice.routeName);
+                          Navigator.pushNamed(context, car_service.routeName);
                         },
                         child: Container(
                           margin: EdgeInsets.all(10),
@@ -175,7 +177,7 @@ class homepagewidget extends StatelessWidget{
                       TextButton(
 
                         onPressed: (){
-                          Navigator.pushNamed(context, selling.routeName);
+                          Navigator.pushNamed(context, selling_car.routeName);
                         },
                         child: Container(
                           margin: EdgeInsets.all(10),
@@ -209,7 +211,7 @@ class homepagewidget extends StatelessWidget{
                       TextButton(
 
                         onPressed: (){
-                          Navigator.pushNamed(context, newcar.routeName);
+                          Navigator.pushNamed(context, category.routeName);
                         },
                         child: Container(
                           margin: EdgeInsets.all(10),

@@ -8,6 +8,7 @@ import 'package:car_zone/new_car.dart';
 import 'package:car_zone/old_car.dart';
 import 'package:car_zone/rescue_winch.dart';
 import 'package:car_zone/selling_car.dart';
+import 'package:car_zone/service.dart';
 import 'package:car_zone/sgin_in_screen.dart';
 import 'package:car_zone/google.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -31,12 +32,15 @@ class MyApp extends StatelessWidget{
          sginin.routeName:(buildcontext)=>sginin(),
          homepage.routeName:(buildcontext)=>homepage(),
          SignInDemo.routeName:(buildcontext)=>SignInDemo(),
-         carservice.routeName:(buildcontext)=>carservice(),
+         car_service.routeName:(buildcontext)=>car_service(),
+         service.routeName:(buildcontext)=>service(),
          winch.routeName:(buildcontext)=>winch(),
          agencies.routeName:(buildcontext)=>agencies(),
-         selling.routeName:(buildcontext)=>selling(),
-         newcar.routeName:(buildcontext)=>newcar(),
+         selling_car.routeName:(buildcontext)=>selling_car(),
+
          oldcar.routeName:(buildcontext)=>oldcar(),
+         category.routeName:(buildcontext)=>category(),
+
 
 
 

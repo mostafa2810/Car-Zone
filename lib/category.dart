@@ -1,9 +1,13 @@
+import 'package:car_zone/car_service.dart';
 import 'package:car_zone/category_button.dart';
 import 'package:car_zone/category_text.dart';
+import 'package:car_zone/old_car.dart';
+import 'package:car_zone/selling_car.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class category extends StatelessWidget {
+  static const String routeName='category';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,15 +157,7 @@ class category extends StatelessWidget {
 
 
 
-                                    SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                        children: [
-                                          ButtonText('Store'),
-                                        ],
-                                      ),
-                                    ),
+
                                     SingleChildScrollView(
                                       scrollDirection: Axis.horizontal,
                                       child: Row(
@@ -194,7 +190,10 @@ class category extends StatelessWidget {
                                       child: Row(
                                         mainAxisAlignment:MainAxisAlignment.spaceAround,
                                         children: [
-                                          ButtonText('Selling a car'),
+                                          TextButton(onPressed:(){
+                                            Navigator.pushNamed(context, selling_car.routeName);
+                                          }, child:ButtonText('Selling a car'),)
+
                                         ],
                                       ),
                                     ),
@@ -212,19 +211,15 @@ class category extends StatelessWidget {
                                       child: Row(
                                         mainAxisAlignment:MainAxisAlignment.spaceAround,
                                         children: [
-                                          ButtonText('Services'),
+                                          TextButton(onPressed:(){
+                                            Navigator.pushNamed(context, car_service.routeName);
+                                          }, child:  ButtonText(
+                                              'Car''\n''Services'),),
+
                                         ],
                                       ),
                                     ),
-                                    SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                        children: [
-                                          ButtonText('Price Movement'),
-                                        ],
-                                      ),
-                                    ),
+
                                   ],
                         ),
                               )
